@@ -1,1 +1,18 @@
-print("Hello World?")
+## Input : kassem ataya
+## Output: Kassem Ataya
+
+
+def solve(s):
+    l=list(s) #sting turned into a list["k","a","s","s","e","m"," ","a","t","a","y","a"]
+    for i in range(len(l)): # for i in range 0 till length of string
+     if(i==0): # i is = to 0 which is the begging of the string l[0] is gonna end up being the begging of the string
+         l[i]=l[i].upper() #change the first variable to its upper counterpart
+
+
+     elif(l[i]==" "): #else if its an empty space than the index infront will be upper as well so it works if its two white spaces infront of each other""  "
+         l[i+1]=l[i+1].upper()
+    str_="".join((l)) #Join the list at the end u
+    return(str_)
+s = input()
+result = solve(s)
+print(result)
