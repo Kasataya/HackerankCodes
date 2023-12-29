@@ -2,6 +2,30 @@
 ## Output: Kassem Ataya
 
 
+#Answer in object oriented programming
+class stringManipulation:
+    l = []
+
+    def capitalizeFirst(self,string):
+        self.convertStringToList(string)
+        for i in range(len(self.l)):
+            if(i==0):
+                self.l[i]=self.l[i].upper() 
+
+
+            elif(self.l[i]==" "):
+                self.l[i+1]=self.l[i+1].upper()
+        str_="".join((self.l)) 
+        return(str_)
+    def convertStringToList(self,string):
+        self.l = list(string)
+
+s = input()
+result = stringManipulation()
+print(result.capitalizeFirst(s))
+
+#Answer in structural programing
+'''
 def solve(s):
     l=list(s) #sting turned into a list["k","a","s","s","e","m"," ","a","t","a","y","a"]
     for i in range(len(l)): # for i in range 0 till length of string
@@ -16,3 +40,4 @@ def solve(s):
 s = input()
 result = solve(s)
 print(result)
+'''
